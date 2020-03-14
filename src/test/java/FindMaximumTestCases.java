@@ -33,18 +33,38 @@ public class FindMaximumTestCases
         Assert.assertEquals((Float) 30.3f,maxNumber);
     }
     @Test
-    public void givenFloat_TwoIntegersSame_ShouldReturnMaximum()
+    public void givenFloat_TwoFloatValuesSame_ShouldReturnMaximum()
     {
         Generics findMaximum = new Generics();
         Float maxNumber = findMaximum.maximumNumber(10.1f,30.20f,30.20f);
         Assert.assertEquals((Float) 30.20f,maxNumber);
     }
     @Test
-    public void givenFloat_ThreeIntegerssame_ShouldReturnMaximum()
+    public void givenFloat_ThreeFloatValuesSame_ShouldReturnMaximum()
     {
         Generics findMaximum = new Generics();
         Float maxNumber = findMaximum.maximumNumber(30.10f,30.10f,30.10f);
         Assert.assertEquals((Float)30.10f,maxNumber);
+    }
+    @Test
+    public void givenStrings_WhenMaxAtOne_ReturnMaximum() {
+        Generics maxString = new Generics();
+        String maximum = maxString.largestString("10", "20", "300");
+        Assert.assertEquals("300", maximum);
+    }
+
+    @Test
+    public void givenStrings_WhenMaxAtTwo_ReturnMaximum() {
+        Generics maxString = new Generics();
+        String maximum = maxString.largestString("1", "700", "30");
+        Assert.assertEquals("700", maximum);
+    }
+
+    @Test
+    public void givenStrings_WhenMaxAtThree_ReturnMaximum() {
+        Generics maxString = new Generics();
+        String maximum = maxString.largestString("30", "5", "700");
+        Assert.assertEquals("700", maximum);
     }
 
 }
