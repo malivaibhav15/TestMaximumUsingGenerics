@@ -9,4 +9,13 @@ public class Generics
             return number3;
 
     }
+    public static float maximumNumber(Float number1 , Float number2 , Float number3)
+    {
+        Float maximum = Math.max(number1,number2);
+        if (maximum > number3)
+            return maximum;
+        else
+            return number3;
+
+    }
 }
